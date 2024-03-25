@@ -28,6 +28,7 @@ export const decodeSwapEvent = (
     data,
     topics,
   });
+  console.log(event.args)
   const {amount0, amount1} = event.args;
   const amountIn = amount0 > 0 ? amount0 : amount1;
   const amountOut = amount0 > 0 ? amount1 : amount0;
